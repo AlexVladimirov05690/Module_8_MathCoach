@@ -8,6 +8,4 @@ public abstract class Exercise {
     abstract public void setAnswer();
     abstract public boolean result();
 
-
-
 }

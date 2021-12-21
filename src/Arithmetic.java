@@ -1,8 +1,9 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Arithmetic extends Exercise{
-    int c = 0;
+    private int rightAnswer = 0;
     @Override
     public void createQuestion() {
         Random random = new Random();
@@ -13,23 +14,22 @@ public class Arithmetic extends Exercise{
         choice = (int) (Math.random() * 4);
         switch (choice) {
             case 0 -> {
-                c = a + b;
+                rightAnswer = a + b;
                 sign = '+';
             }
             case 1 -> {
-                c = a - b;
+                rightAnswer = a - b;
                 sign = '-';
             }
             case 2 -> {
-                c = a * b;
-                sign = '-';
+                rightAnswer = a * b;
+                sign = '*';
             }
             case 3 -> {
                 b++;
                 a = a * b;
-                c = a / b;
+                rightAnswer = a / b;
                 sign = '/';
-
             }
         }
         question = "Сколько будет " + a + " " + sign + " " + b + "?";
@@ -48,8 +48,6 @@ public class Arithmetic extends Exercise{
 
     @Override
     public boolean result() {
-        return c == answer;
+        return rightAnswer == answer;
     }
-
-
 }
