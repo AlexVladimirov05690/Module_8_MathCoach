@@ -1,11 +1,11 @@
 public abstract class Exercise {
     String name;
     String question;
-    String answer;
-    boolean result;
+    int answer;
 
     abstract public void createQuestion();
     abstract public String showQuestion();
+    abstract public void setAnswer();
     abstract public boolean result();
 
 
